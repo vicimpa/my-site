@@ -1,0 +1,14 @@
+version: 0.0.0
+screenshots: null
+
+name:
+  en: Empty project
+  ru: Пустой проект
+
+description:
+  en: Project form settings builder
+  ru: Проект для настройки сборщика
+
+readme:
+  en: README.md
+  ru: README_RU.md

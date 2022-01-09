@@ -1,0 +1,31 @@
+.center
+  display: flex
+
+  &[data-full]
+    width: 100%
+    height: 100%
+
+  &[data-absolute]
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+  &[data-justify]
+    justify-content: center
+
+  &[data-align]
+    align-items: center
+
+  &[data-row]
+    flex-direction: row
+
+  &[data-row-reverse]
+    flex-direction: row-reverse
+
+  &[data-column]
+    flex-direction: column
+
+  &[data-column-reverse]
+    flex-direction: column-reverse

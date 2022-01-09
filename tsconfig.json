@@ -17,11 +17,23 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "exactOptionalPropertyTypes": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "paths": {
+      "projects/*": [
+        "public/projects/*"
+      ]
+    }
   },
   "include": [
     "./src"
+  ],
+  "exclude": [
+    "./build",
+    "./node_modules"
   ]
 }

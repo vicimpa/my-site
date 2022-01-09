@@ -1,3 +1,3 @@
-# {{name}}
+# Empty Project
 
-### {{description}}
+### Empty project for settings build

@@ -1,0 +1,1 @@
+export const getDirectoryProject = (id: string) => `/projects/${id}`

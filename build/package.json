@@ -1,0 +1,15 @@
+{
+  "name": "my-site-build",
+  "version": "0.0.1",
+  "scripts": {
+    "postinstall": "esbuild main.ts --bundle --platform=node --target=node17.2 --outfile=bin/build.js"
+  },
+  "bin": {
+    "my-site-build": "./bin/build.js"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.1",
+    "esbuild": "^0.14.6",
+    "yaml": "^1.10.2"
+  }
+}

@@ -1,0 +1,99 @@
+
+.slide
+  --speed: 0.3s
+  --opacity: 1
+  --scale: 1
+  --blur: 0px
+  --scaleX: 1
+  --scaleY: 1
+  --translateX: 0
+  --translateY: 0
+  --width: calc(100vw - 0px)
+  --height: calc(100vh - 0px)
+
+  &[data-absolute]
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+  &[data-fade]
+    --opacity: 1
+
+    &[data-hide]
+      --opacity: 0
+
+  &[data-scale]
+    --scaleX: 1
+    --scaleY: 1
+
+    &[data-hide]
+      --scaleX: 0.4
+      --scaleY: 0.4
+
+  &[data-width]
+    --width: calc(100% - 0px)
+
+    &[data-hide]
+      --width: 0px
+
+  &[data-height]
+    --height: calc(100% - 0px)
+
+    &[data-hide]
+      --height: 0px
+
+  &[data-blur]
+    --blur: 0px
+
+    &[data-hide]
+      --blur: 10px
+
+  &[data-swipe-top]
+    --translateY: 0
+
+    &[data-hide]
+      --translateY: -100
+
+  &[data-swipe-left]
+    --translateX: 0
+
+    &[data-hide]
+      --translateX: -100
+
+  &[data-swipe-right]
+    --translateX: 0
+
+    &[data-hide]
+      --translateX: 100
+
+  &[data-swipe-bottom]
+    --translateY: 0
+
+    &[data-hide]
+      --translateY: 100
+
+  &[data-blur]
+    --blur: 0px
+
+    &[data-hide]
+      --blur: 10px
+
+  &
+    transition-property: visibility, opacity, transform, filter, max-width, max-height
+    transition-duration: 0s, var(--speed), var(--speed), var(--speed), var(--speed), var(--speed)
+    transition-delay: 0s, 0s, 0s, 0s, 0s, 0s
+    visibility: visible
+
+    opacity: var(--opacity)
+    filter: blur(var(--blur))
+    transform: scale(var(--scale)) matrix(var(--scaleX),0,0,var(--scaleY), var(--translateX), var(--translateY))
+    transition-timing-function: ease, ease, ease, ease, cubic-bezier(1, 0, 1, 0), cubic-bezier(1, 0, 1, 0)
+    max-width: var(--width)
+    max-height: var(--height)
+
+    &[data-hide]
+      transition-delay: var(--speed), 0s, 0s, 0s, 0s, 0s
+      transition-timing-function: ease, ease, ease, ease, cubic-bezier(0, 1, 0, 1), cubic-bezier(0, 1, 0, 1)
+      visibility: collapse
